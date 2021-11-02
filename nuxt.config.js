@@ -1,4 +1,5 @@
 export default {
+  rootUrl: process.env.NODE_ENV === 'production' ? 'https://nuxt-bnb-formation.vercel.app' : 'http://localhost:3000',
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -65,7 +66,7 @@ export default {
     }
   },
   publicRuntimeConfig:{
-    rootUrl: process.env.NODE_ENV === 'production' ? 'https://nuxtbnb.com' : 'http://localhost:3000',
+    
    auth:{
      cookieName: 'idToken',
      clientId: '1096738360283-p3nifqavajmh7kgp00qe4v2ag3qnqndc.apps.googleusercontent.com'
