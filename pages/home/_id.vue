@@ -30,7 +30,7 @@ export default {
           "adressLocality": this.home.location.city,
           "adressRegion": this.home.location.state,
           "postalCode": this.home.location.zipcode,
-          "streetAdress": this.home.loocation.address,
+          "streetAdress": this.home.location.address,
         },
         "aggregateRating":{
           "@type": "AggregateRating",
