@@ -65,6 +65,7 @@ export default {
     }
   },
   publicRuntimeConfig:{
+    rootUrl: process.env.NODE_ENV === 'production' ? 'https://nuxtbnb.com' : 'http://localhost:3000',
    auth:{
      cookieName: 'idToken',
      clientId: '1096738360283-p3nifqavajmh7kgp00qe4v2ag3qnqndc.apps.googleusercontent.com'
@@ -83,10 +84,10 @@ export default {
   privateRuntimeConfig:{
     algolia:{
       appId : 'WXLDNGI2AX',
-      key:'96f9abb169d438bc4019707e92fdb869',
+      key:process.env.ALGOLIA_SECRET_KEY,
     },
     cloudinary:{
-      apiSecret : 'jQ2eHqsTZsDkbG6cybOkU4858nc'
+      apiSecret : process.env.CLOUDINARY_SECRET_KEY,
     },
     stripe:{
       secretKey: process.env.STRIPE_SECRET_KEY
