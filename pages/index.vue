@@ -1,23 +1,20 @@
 <template>
-  <div>
-    <div
-      v-for="home in homes"
-      :key="home.objectID"
-      style="float: left; margin: 10px"
-    >
-      <!-- 
-  Nuxt permet de prefetch les autres pages, pour éviter que tout se charge on utilise
-  nuxt-link ou router-link
-  -->
-      <nuxt-link :to="`/home/${home.objectID}`"
-        ><Homecard :home="home"
-      /></nuxt-link>
+ <div class="app">
+    <div class="app-container">
+      <div class="app-hero">
+        <h2>
+          - Settle in somewhere new. Discover stays to live, work, or just relax.
+        </h2>
+      </div>
     </div>
+    <SectionPremiumListings />
+    <SectionRecentlyAdded class="app-background-grey" :homes="homes" />
+    <SectionMore />
   </div>
 </template>
 
 <script>
-import homes from "~/data/homes";
+
 export default {
   head() {
     return {
