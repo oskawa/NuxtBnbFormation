@@ -7,7 +7,7 @@ export default (algoliaConfig) => {
     return {
         bookHome: async (identityId, homeId, start, end) => {
             try {
-                return unWrap(await fetch(`https://${algoliaConfig.appId}-dsn.algolia.net/1/indexes/bookings/`, {
+                return unWrap(await fetch(`https://${algoliaConfig.appId}-dsn.algolia.net/1/indexes/booking/`, {
                     headers,
                     method: 'POST',
                     body: JSON.stringify({
